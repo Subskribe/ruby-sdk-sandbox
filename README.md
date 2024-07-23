@@ -7,7 +7,7 @@ Ruby Gem to connect to Subskribe sandbox envinronment
 1. Install gem from rubygems.org
 
 ```shell
-gem install subskribe_dev
+gem install subskribe_sandbox
 ```
 
 2. In your ruby project's Gemfile, add below line to include gem:
@@ -46,7 +46,7 @@ You should see the list of currencies supported in your sandbox! 🎉
 
 ### Documentation
 
-All URIs are relative to *https://api.sandbox.subskribe.net*
+Below is the list of all classes and methods.
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -387,17 +387,9 @@ Class | Method | HTTP request | Description
 *SubskribeSandboxClient::UsersApi* | [**upload_csv**](docs/UsersApi.md#upload_csv) | **POST** /users/upload | Bulk user upload
 
 
-### Authentication
-
-All api requests should be provided with an API key in the config, as shown below:
-
-```ruby
-require 'subskribe_sandbox_client'
-
-```
-
 ### Notes
 
-The API endpoints are documented at https://docs.subskribe.com
+This SDK is generated using the [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) project.
 
-This SDK is generated using the [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) project
+The underlying API endpoints are documented at https://docs.subskribe.com.
+

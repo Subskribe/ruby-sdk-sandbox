@@ -1,6 +1,6 @@
 # Subskribe Sandbox Ruby Gem
 
-Ruby Gem to connect to Subskribe sandbox envinronment
+Ruby Gem to connect to Subskribe sandbox environment
 
 ### Using Gem
 
@@ -19,7 +19,6 @@ gem 'subskribe_sandbox', '~> 1.0.0'
 3. Create `example.rb` file with below example
 
 ```ruby
-# load the gem
 require 'subskribe_sandbox'
 SubskribeSandboxClient.configure do |config|
   config.api_key['X-API-Key'] = 'YOUR API KEY'
@@ -27,10 +26,18 @@ end
 
 api_instance = SubskribeSandboxClient::SettingsApi.new
 
+opts = {
+  cursor: '',
+  limit: 5 
+}
+
 begin
-  api_instance.get_supported_currencies
+  result = api_instance.get_units_of_measure(opts)
+  result.data.each { |uom|
+    puts uom.name
+  }
 rescue SubskribeSandboxClient::ApiError => e
-  puts "Exception when calling SettingsApi->get_supported_currencies: #{e}"
+  puts "Exception when calling SettingsApi->get_units_of_measure: #{e}"
 end
 ```
 
@@ -42,7 +49,7 @@ end
 ruby example.rb
 ```
 
-You should see the list of currencies supported in your sandbox! 🎉
+You should see the list of Units of Measures as configured in your sandbox! 🎉
 
 ### Documentation
 

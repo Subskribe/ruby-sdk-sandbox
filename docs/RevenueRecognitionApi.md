@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**create_recognition_event**](RevenueRecognitionApi.md#create_recognition_event) | **POST** /revrec/events | Create a revenue recognition event
 [**delete_rule**](RevenueRecognitionApi.md#delete_rule) | **DELETE** /revrec/rules/{ruleId} | Delete a recognition rule
 [**get_recognition_events_by_subscription_id_charge_id**](RevenueRecognitionApi.md#get_recognition_events_by_subscription_id_charge_id) | **GET** /revrec/events | Get revenue recognition events
-[**get_recognition_rule_by_id**](RevenueRecognitionApi.md#get_recognition_rule_by_id) | **GET** /revrec/rules | Get revenue recognition rules
-[**get_recognition_rule_by_id1**](RevenueRecognitionApi.md#get_recognition_rule_by_id1) | **GET** /revrec/rules/{id} | Get revenue recognition rule
+[**get_recognition_rule_by_id**](RevenueRecognitionApi.md#get_recognition_rule_by_id) | **GET** /revrec/rules/{id} | Get revenue recognition rule
+[**get_recognition_rule_by_id1**](RevenueRecognitionApi.md#get_recognition_rule_by_id1) | **GET** /revrec/rules | Get revenue recognition rules
 [**get_revenue_waterfall**](RevenueRecognitionApi.md#get_revenue_waterfall) | **GET** /revrec/waterfall | Download waterfall report
 [**get_revenue_waterfall_report_v2**](RevenueRecognitionApi.md#get_revenue_waterfall_report_v2) | **GET** /revrec/waterfall/v2 | Download waterfall report
 [**upload_completion_events**](RevenueRecognitionApi.md#upload_completion_events) | **POST** /revrec/events/upload | Upload revenue events
@@ -237,54 +237,7 @@ Name | Type | Description  | Notes
 
 
 # **get_recognition_rule_by_id**
-> get_recognition_rule_by_id
-
-Get revenue recognition rules
-
-Get revenue recognition rules.
-
-### Example
-```ruby
-# load the gem
-require 'subskribe_sandbox'
-# setup authorization
-SubskribeSandboxClient.configure do |config|
-  # Configure API key authorization: ApiKeyAuth
-  config.api_key['X-API-Key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['X-API-Key'] = 'Bearer'
-end
-
-api_instance = SubskribeSandboxClient::RevenueRecognitionApi.new
-
-begin
-  #Get revenue recognition rules
-  api_instance.get_recognition_rule_by_id
-rescue SubskribeSandboxClient::ApiError => e
-  puts "Exception when calling RevenueRecognitionApi->get_recognition_rule_by_id: #{e}"
-end
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **get_recognition_rule_by_id1**
-> get_recognition_rule_by_id1(id)
+> get_recognition_rule_by_id(id)
 
 Get revenue recognition rule
 
@@ -309,9 +262,9 @@ id = 'id_example' # String | id of the recognition rule
 
 begin
   #Get revenue recognition rule
-  api_instance.get_recognition_rule_by_id1(id)
+  api_instance.get_recognition_rule_by_id(id)
 rescue SubskribeSandboxClient::ApiError => e
-  puts "Exception when calling RevenueRecognitionApi->get_recognition_rule_by_id1: #{e}"
+  puts "Exception when calling RevenueRecognitionApi->get_recognition_rule_by_id: #{e}"
 end
 ```
 
@@ -320,6 +273,53 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| id of the recognition rule | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **get_recognition_rule_by_id1**
+> get_recognition_rule_by_id1
+
+Get revenue recognition rules
+
+Get revenue recognition rules.
+
+### Example
+```ruby
+# load the gem
+require 'subskribe_sandbox'
+# setup authorization
+SubskribeSandboxClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['X-API-Key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['X-API-Key'] = 'Bearer'
+end
+
+api_instance = SubskribeSandboxClient::RevenueRecognitionApi.new
+
+begin
+  #Get revenue recognition rules
+  api_instance.get_recognition_rule_by_id1
+rescue SubskribeSandboxClient::ApiError => e
+  puts "Exception when calling RevenueRecognitionApi->get_recognition_rule_by_id1: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
 
 ### Return type
 

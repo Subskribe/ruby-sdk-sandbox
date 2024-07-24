@@ -18,11 +18,11 @@ Name | Type | Description | Notes
 **email_sent** | **BOOLEAN** |  | [optional] 
 **created_on** | **Integer** |  | [optional] 
 **updated_on** | **Integer** |  | [optional] 
-**included_for_emailing** | **BOOLEAN** |  | [optional] 
-**invoice_posted** | **BOOLEAN** |  | [optional] 
 **draft_invoice_generated** | **BOOLEAN** |  | [optional] 
 **included_for_posting** | **BOOLEAN** |  | [optional] 
 **invoice_not_posted** | **BOOLEAN** |  | [optional] 
 **draft_invoice_not_generated** | **BOOLEAN** |  | [optional] 
+**included_for_emailing** | **BOOLEAN** |  | [optional] 
+**invoice_posted** | **BOOLEAN** |  | [optional] 
 
 

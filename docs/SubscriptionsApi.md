@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 
 # **get_subscriptions**
-> PaginatedResponse get_subscriptions(opts)
+> PaginatedSubscriptionsResponse get_subscriptions(opts)
 
 Get paginated subscriptions
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaginatedResponse**](PaginatedResponse.md)
+[**PaginatedSubscriptionsResponse**](PaginatedSubscriptionsResponse.md)
 
 ### Authorization
 

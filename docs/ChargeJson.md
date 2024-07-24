@@ -39,9 +39,9 @@ Name | Type | Description | Notes
 **billing_term** | **String** |  | [optional] 
 **billing_cycle** | **String** |  | [optional] 
 **should_track_arr** | **BOOLEAN** |  | [optional] 
-**custom** | **BOOLEAN** |  | [optional] 
 **drawdown** | **BOOLEAN** |  | [optional] 
-**event_based** | **BOOLEAN** |  | [optional] 
 **list_price_editable** | **BOOLEAN** |  | [optional] 
+**event_based** | **BOOLEAN** |  | [optional] 
+**custom** | **BOOLEAN** |  | [optional] 
 
 

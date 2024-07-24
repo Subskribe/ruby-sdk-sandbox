@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 
 
 # **get_accounts**
-> Array&lt;AccountJson&gt; get_accounts(opts)
+> PaginatedAccountsResponse get_accounts(opts)
 
 Get all accounts
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;AccountJson&gt;**](AccountJson.md)
+[**PaginatedAccountsResponse**](PaginatedAccountsResponse.md)
 
 ### Authorization
 

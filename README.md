@@ -13,7 +13,7 @@ gem install subskribe_sandbox
 2. In your ruby project's Gemfile, add below line to include gem:
 
 ```
-gem 'subskribe_sandbox', '~> 1.0.0'
+gem 'subskribe_sandbox'
 ```
 
 3. Create `example.rb` file with below example
@@ -41,15 +41,19 @@ rescue SubskribeSandboxClient::ApiError => e
 end
 ```
 
-4. Update the `YOUR API KEY` with your actual API key, obtained from https://sandbox.subskribe.net/settings/api-key
-
-5. Run the code:
+4. Get API Key from sandbox: https://sandbox.subskribe.net/settings/api-key
+5. Update `YOUR API KEY` in your `example.rb` file with the key obtained above
+6. Run the code:
 
 ```
 ruby example.rb
 ```
 
 You should see the list of Units of Measures as configured in your sandbox! 🎉
+
+### More Examples
+
+More examples are under [examples](examples) folder.
 
 ### Documentation
 

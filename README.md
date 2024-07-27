@@ -24,20 +24,22 @@ SubskribeSandboxClient.configure do |config|
   config.api_key['X-API-Key'] = 'YOUR API KEY'
 end
 
-api_instance = SubskribeSandboxClient::SettingsApi.new
+api_instance = SubskribeSandboxClient::AccountsApi.new
 
 opts = {
   cursor: '',
-  limit: 5 
+  type: 'ALL',
+  limit: 5
 }
 
 begin
-  result = api_instance.get_units_of_measure(opts)
-  result.data.each { |uom|
-    puts uom.name
+  result = api_instance.get_accounts(opts)
+  result.data.each { |item|
+    puts "#{item.id}: #{item.name}"
   }
 rescue SubskribeSandboxClient::ApiError => e
-  puts "Exception when calling SettingsApi->get_units_of_measure: #{e}"
+  puts "Exception when calling API:"
+  puts "HTTP #{e.code}: #{e.response_body}"
 end
 ```
 
@@ -49,7 +51,7 @@ end
 ruby example.rb
 ```
 
-You should see the list of Units of Measures as configured in your sandbox! 🎉
+You should see the list of accounts from your sandbox account! 🎉
 
 ### More Examples
 
